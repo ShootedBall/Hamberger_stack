@@ -76,22 +76,10 @@ public class Game_manager : MonoBehaviour {
         next_incredi_text.text = "<Next>\n" + (now_bugger_incredi);
 
 
-        //Active Touch
-        for (int i = 0; i < Input.touchCount; i++)
-        {
-            Touch touch = Input.GetTouch(i);
-
-            
-        
 
 
 
-
-        }
-
-
-
-}
+    }
 
 
     //넘겨준 인자 만큼 스코어 추가
