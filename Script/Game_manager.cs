@@ -75,6 +75,8 @@ public class Game_manager : MonoBehaviour {
         life_text.text = "life : " + (life.ToString());
         next_incredi_text.text = "<Next>\n" + (now_bugger_incredi);
 
+  
+
     }
 
 
