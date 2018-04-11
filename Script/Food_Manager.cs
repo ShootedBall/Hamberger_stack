@@ -9,6 +9,9 @@ public class Food_Manager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        
+        //HOTFIX(1) 원인 미상 오류 (  Time scale 이 0으로 강제 지정 )
+        Time.timeScale = 1;
         InvokeRepeating("Make", 3, 0.5f);
 
     }
@@ -16,11 +19,13 @@ public class Food_Manager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 		
 	}
 
     void Make()
     {
+        print("생성중!");
         int A = Random.Range(0, 6);
         A = Random.Range(0, 6);
 

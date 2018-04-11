@@ -19,7 +19,6 @@ public class Move_Food : MonoBehaviour {
 
         transform.Translate(Vector3.down * Speed * Time.deltaTime);
         //Speed += Time.deltaTime / 2;
-        print("Check Move_Food active");
 
 
 

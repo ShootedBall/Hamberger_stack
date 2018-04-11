@@ -17,6 +17,8 @@ public class Move : MonoBehaviour
     void Update()
     {
 
+        dishPositon = gameObject.transform.position;
+
         //Move to left
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -29,18 +31,41 @@ public class Move : MonoBehaviour
             RMove();
         }
 
+
+
+        //Active Touch
+        for (int i = 0; i < Input.touchCount; i++)
+        {
+            Touch touch = Input.GetTouch(i);
+
+       
+
+            //시작좌표기억
+            if ((touch.position.x < -10) && (touch.position.x > -170))
+            {
+                transform.Translate(Vector3.left * Speed * Time.deltaTime);
+            }
+
+            else if ((touch.position.x < 350) && (touch.position.x > 190))
+            {
+                transform.Translate(Vector3.right * Speed * Time.deltaTime);
+            }
+
+
+        }
+
     }
 
     public void LMove()
     {
-        if (dishPositon.x < 0.5)
+        if (dishPositon.x > -6)
             transform.Translate(Vector3.left * Speed * Time.deltaTime);
             
     }
 
     public void RMove()
     {
-        if (dishPositon.x > -6)
+       if (dishPositon.x < 0.5)
             transform.Translate(Vector3.right * Speed * Time.deltaTime);
            
     }
