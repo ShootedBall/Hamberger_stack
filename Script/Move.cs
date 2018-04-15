@@ -41,12 +41,12 @@ public class Move : MonoBehaviour
        
 
             //시작좌표기억
-            if ((touch.position.x < -10) && (touch.position.x > -170))
+            if ((touch.position.x < -37) && (touch.position.x > -77))
             {
                 transform.Translate(Vector3.left * Speed * Time.deltaTime);
             }
 
-            else if ((touch.position.x < 350) && (touch.position.x > 190))
+            else if ((touch.position.x < 85) && (touch.position.x > 125))
             {
                 transform.Translate(Vector3.right * Speed * Time.deltaTime);
             }
