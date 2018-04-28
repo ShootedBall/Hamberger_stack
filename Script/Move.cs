@@ -1,72 +1,79 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+
 
 public class Move : MonoBehaviour
 {
     public int Speed;
-    public Vector3 dishPositon;
+    bool left_collider = false;
+    bool right_collider = false;
+
+
+    float directionX;
+    Rigidbody2D rb;
 
     // Use this for initialization
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        print("Update");
 
     }
 
     // Update is called once per frame
     void Update()
     {
+ 
+        directionX = CrossPlatformInputManager.GetAxis("Horizontal");
+        rb.velocity = new Vector2(directionX * 90, 0);
 
-        dishPositon = gameObject.transform.position;
 
-        //Move to left
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (left_collider == true)
         {
-            LMove();
+
+            if (rb.velocity.x < 0)
+                rb.velocity = new Vector2(0, 0);
+            else
+                left_collider = false;
+
         }
 
-        //Move to right
-        if (Input.GetKey(KeyCode.RightArrow))
+
+        if (right_collider == true)
         {
-            RMove();
+            if (rb.velocity.x > 0)
+                rb.velocity = new Vector2(0, 0);
+            else
+                right_collider = false;
+
         }
 
-
-
-        //Active Touch
-        for (int i = 0; i < Input.touchCount; i++)
-        {
-            Touch touch = Input.GetTouch(i);
-
-       
-
-            //시작좌표기억
-            if ((touch.position.x < -37) && (touch.position.x > -77))
-            {
-                transform.Translate(Vector3.left * Speed * Time.deltaTime);
-            }
-
-            else if ((touch.position.x < 85) && (touch.position.x > 125))
-            {
-                transform.Translate(Vector3.right * Speed * Time.deltaTime);
-            }
-
-
-        }
 
     }
 
-    public void LMove()
+
+    void OnTriggerEnter2D(Collider2D Get)
     {
-        if (dishPositon.x > -6)
-            transform.Translate(Vector3.left * Speed * Time.deltaTime);
-            
+
+        //TestLine
+
+        if (Get.gameObject.name == "Left_transparent_wall")
+        {
+                left_collider = true;
+
+        }
+
+
+        if (Get.gameObject.name == "Right_transparent_wall")
+        {
+                right_collider = true;
+
+        }
+
+
     }
 
-    public void RMove()
-    {
-       if (dishPositon.x < 0.5)
-            transform.Translate(Vector3.right * Speed * Time.deltaTime);
-           
-    }
+
 }
