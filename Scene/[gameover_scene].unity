@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 17001560}
   - component: {fileID: 17001559}
   - component: {fileID: 17001558}
-  - component: {fileID: 17001561}
   m_Layer: 5
   m_Name: reButton
   m_TagString: Untagged
@@ -190,8 +189,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 265157833}
-        m_MethodName: SceneChange
+      - m_Target: {fileID: 84494193}
+        m_MethodName: MoveScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -236,42 +235,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 17001556}
---- !u!114 &17001561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 17001556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 265157833}
-          m_MethodName: SceneChange
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1 &27930605
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 27930607}
   - component: {fileID: 27930606}
+  - component: {fileID: 27930608}
   m_Layer: 0
   m_Name: "\uD648\uBC84\uD2BC"
   m_TagString: Untagged
@@ -345,6 +309,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27930608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 27930605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6ba2032b9bafe4193f2fbead658d35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &84494190
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84494192}
   - component: {fileID: 84494191}
+  - component: {fileID: 84494193}
   m_Layer: 0
   m_Name: "\uC7AC\uB3C4\uC804 \uBC84\uD2BC"
   m_TagString: Untagged
@@ -418,6 +394,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84494193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84494190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b39ceef0c167df49b125a601430b964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &265157828
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +521,6 @@ GameObject:
   - component: {fileID: 1075349501}
   - component: {fileID: 1075349500}
   - component: {fileID: 1075349499}
-  - component: {fileID: 1075349502}
   m_Layer: 5
   m_Name: homButton
   m_TagString: Untagged
@@ -600,8 +586,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 265157834}
-        m_MethodName: SceneChange
+      - m_Target: {fileID: 27930608}
+        m_MethodName: MoveScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -646,42 +632,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1075349497}
---- !u!114 &1075349502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1075349497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 265157834}
-          m_MethodName: SceneChange
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1 &1231433553
 GameObject:
   m_ObjectHideFlags: 0

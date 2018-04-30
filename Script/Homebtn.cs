@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Homebtn : MonoBehaviour
-{
+{ 
 
-    public void SceneChange()
+    public void MoveScene()
     {
         SceneManager.LoadScene("[start_scene]");
+
     }
 
 }

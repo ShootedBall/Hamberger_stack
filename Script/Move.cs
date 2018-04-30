@@ -18,7 +18,6 @@ public class Move : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        print("Update");
 
     }
 
@@ -33,7 +32,7 @@ public class Move : MonoBehaviour
         if (left_collider == true)
         {
 
-            if (rb.velocity.x < 0)
+            if (rb.velocity.x <= 0)
                 rb.velocity = new Vector2(0, 0);
             else
                 left_collider = false;
